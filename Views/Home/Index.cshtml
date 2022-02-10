@@ -1,0 +1,23 @@
+﻿@model PassifDataViewToController.Models.EmployeeModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form asp-action="Index" asp-controller="Employee" method="post">
+    <label asp-for="EmpId">Employee Id</label>
+    <input asp-for="EmpId" type="text" />
+    <br /> <br />
+    <label asp-for="EmpName">Employee Name</label>
+    <input asp-for="EmpName" type="text" />
+    <br /> <br />
+    <label asp-for="EmpSalary">Employee Address</label>
+    <input asp-for="EmpSalary" type="text" />
+    <br /> <br />
+    <input type="submit" value="Create" class="btn btn-primary" />
+</form>
